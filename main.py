@@ -1,3 +1,5 @@
+from builtins import eval, str, super
+
 from kivy.app import App
 from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.image import Image
@@ -90,13 +92,13 @@ class MainApp(BoxLayout):
            input.text = 'Error! \(x_x\) Tap Ca'
 
 
-class mainapp(App):
+class main(App):
     def build(self):
         return MainApp()
 
 
 if __name__ == '__main__':
-    mainapp().run()
+    main().run()
+#Made By Jonathan Almawi
 
 
-#Made by Jonathan K Almawi
