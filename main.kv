@@ -1,0 +1,47 @@
+#This is where we modify the calc and add its rows/cols, etc
+<MainApp>:
+    orientation: 'vertical'
+    canvas.before:
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source:'images/background.jpg'
+
+
+    BoxLayout:
+        id: title
+        size_hint_y: .1 #10%  Top of page
+        Label:
+            text: 'Calculator'
+            font_size: 35
+            bold: True
+    BoxLayout:
+        id: textinput
+        size_hint_y: .2  #20% Mid-top of page
+        TextInput:
+            id: input
+            size_hint_y: .5
+            padding: 10
+            font_size: 27
+            background_color: (1,1,0,0)
+            focus: True #on the txt input
+            foreground_color: (255, 255, 255, 1)
+
+
+
+    BoxLayout:
+        id: main_button
+        size_hint_y: .7    #70% Central -bottom of page takes 70% of the screen
+        padding: 10
+        #use grid layout for the buttons
+        #create a list for the grid layout
+        GridLayout:
+            id: numbers
+            cols:4
+            spacing: 5
+
+
+
+
+
+
